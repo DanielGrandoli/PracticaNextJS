@@ -1,5 +1,7 @@
 import { useState,useEffect } from "react"
+import styles from '../styles/Home.module.css';
 import "bootstrap/dist/css/bootstrap.min.css";
+
 
 
 
@@ -61,7 +63,6 @@ export default function about() {
         if(response.ok){
        
         console.log("usuario cargado");
-        window.location.reload();
         }
         else{
             throw new Error("Error en la solicitud.");
@@ -75,7 +76,7 @@ export default function about() {
 
 
     return(
-        <div >
+        <div className={styles.container} >
             <h1>Formulario Usuario</h1>
             <div className="mb-3">
             <label htmlFor="Dni" className="form-label">Dni:</label>
@@ -113,7 +114,7 @@ export default function about() {
                   {Usuarios
                     .sort((a, b) => a.apellido.localeCompare(b.apellido))
                     .map(usuario => (
-                      <article key={usuario.idMesa}>
+                      <article key={usuario.id}>
                         <h3>{usuario.nombre} - {usuario.apellido} - {usuario.dni} - {usuario.email} </h3>
                       </article>
                     ))}
