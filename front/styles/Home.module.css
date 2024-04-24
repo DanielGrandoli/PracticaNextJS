@@ -1,15 +1,16 @@
 .html,
 .body {
-    margin: 0;
+    margin: 0px;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
     font-size: 1rem;
     font-weight: 400;
+    height: 100%;
+    width: 100%;
     line-height: 1.5;
     color: #212529;
     text-align: left;
     background-color: #fff;
-    margin-left: 0.5%;
-    margin-right: 0.5%;
+    
 }
 
 .title a {
@@ -101,10 +102,13 @@
 .nav{
   
   background-color: #008fa3;
-  height: max-content;
-  width: 100% !important;
-  text-align: center;
-  
+    height: max-content;
+    width: 100%;
+    text-align: center;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .footer {
@@ -118,13 +122,16 @@
 
 .h1{
   color: #0070f3;
+  text-align: center;
 }
 
 .lineaAzul{
   background-color: #005b88;
     color: #fff;
     font-family: Montserrat, sans-serif !important;
-    min-height: 6vh;
+    min-height: 2rem;
+    padding: 0px;
+    margin: -6px;
 }
 
 .sellados{
@@ -132,5 +139,36 @@
 }
 
 .titulo{
-  color: white;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  color: #fff;
+  font-size: 2.5rem !important;
+}
+
+.botones{
+  font-family: Montserrat, sans-serif !important;
+    font-weight: 700;
+    font-size: 15px;
+    background-color: #fff;
+    color: #005b88;
+    border: 2px solid #005b88;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .35);
+    border-radius: .25rem;
+}
+
+.botones:hover{
+  background-color: #005b88;
+  color:#fff ;
+  border: 2px solid #005b88;
+}
+
+.botones:active{
+  background-color: #005b88;
+  color:#fff ;
+  border: 2px solid #005b88;
+}
+
+.logoMunicipalidad{
+  height: 100px;
+  width: 300px;
 }
